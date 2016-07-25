@@ -8,3 +8,33 @@
 // Hint: to easily see your output, import java.util.Arrays
 // and use the Arrays.toString(array) method to convert the Array to a string
 // and then log it using System.out.println();
+package grade;
+import java.util.*;
+import java.util.Scanner;
+
+public class ThreeSort {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+threeSort();
+	}
+	
+	public static void threeSort(){
+	
+		Scanner input = new Scanner(System.in);
+	    int[] numbers = new int[3];
+
+	    for (int i = 0; i < numbers.length; i++)
+	    {
+	        System.out.println("Please enter number");
+	        numbers[i] = input.nextInt();
+	    }
+	    System.out.println("The maximum number is "+numbers[2]);
+	    System.out.println("The middle number is "+numbers[1]);
+	    System.out.println("The minimum number is "+numbers[0]);
+	    System.out.println("The resulting array is:");
+System.out.println(Arrays.toString(numbers));
+	}
+}
