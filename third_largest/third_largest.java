@@ -5,29 +5,35 @@
 
 // use the main method only for calling the function where your logic lies. :-)
 
-public class ThirdSort {
+        
+        
+        
+        
+        
+        public class ThirdSort {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static void main(string[] args){
+       ThirdGreatest();
+    }
     public String ThirdGreatest(String[]strArr){
-        String sortedString = "";
-        boolean finalSort =  true;
-        while(finalSort){
+        boolean sort =  true;
+        String smallString = "";result="";
+        
+        while(sort){
             for(int i = 0; i < strArr.length-1; i++){
                 if(strArr[i].length() < strArr[i+1].length()){
-                    sortedString = strArr[i];
+                    smallString = strArr[i];
+                    strArr[i+1]= smallString;
                     strArr[i] = strArr[i+1];
-                    strArr[i+1]= sortedString;
-                    finalSort = false;
+                    
+                    sort = false;
                 };
             }
+       if(strArr.length<3&& strArr.length>0){
+           result=strArr[strArr.length-1];
+       }
+       else{
+           result=strArr[2];
+       }
+       return result;
         }
-        return strArr[2];
-    }
-    public static void main(String[] args) {
-        String[] myArr={"hello", "world", "before", "all"};
-        System.out.println(ThirdGreatest(myArr));
-    }
-
-}
